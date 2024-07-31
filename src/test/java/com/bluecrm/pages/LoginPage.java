@@ -18,12 +18,12 @@ public class LoginPage {
     public WebElement password;
 
     @FindBy(css = "input[type='submit']")
-    public WebElement submit;
+    public WebElement loginButton;
 
     public void login(String userNameStr, String passwordStr) {
         userName.sendKeys(userNameStr);
         password.sendKeys(passwordStr);
-        submit.click();
+        loginButton.click();
         // verification that we logged
     }
 
