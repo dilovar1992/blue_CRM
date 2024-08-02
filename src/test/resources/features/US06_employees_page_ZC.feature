@@ -1,3 +1,4 @@
+@wip
 Feature: Users should be able to access to the Employees page
 
   Background: User is already in the log in page
@@ -25,13 +26,13 @@ Feature: Users should be able to access to the Employees page
       | marketing manager |
 
 
+  @US06AC2
     Scenario Outline: Verify users can add department on the Employees page.
       Given the user logged in as "<userType>"
+      When users click on the Employees page
       When the user clicks on Add Department button
       Then the user can add department
       And the user can see the department in the company structure system
       Examples:
         | userType          |
         | hr                |
-        | help desk         |
-        | marketing manager |
