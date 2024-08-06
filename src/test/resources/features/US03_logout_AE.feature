@@ -20,7 +20,7 @@ Feature: As a user, I should be able to logout.
       | help desk         |
       | marketing manager |
 
-  @wip
+
   Scenario Outline: Verify users can log out using the "Log out" button
     Given the user logged in as "<userType>"
     And user clicks profile menu
