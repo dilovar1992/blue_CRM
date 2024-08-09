@@ -1,13 +1,14 @@
+@smoke @US03 @logout
 Feature: As a user, I should be able to logout.
 
   Background: User is already in the log in page
     Given the user is on the login page
 
-  @logout
+  @US03AC1
   Scenario Outline: Verify user sees 5 options under the profile name.
     Given the user logged in as "<userType>"
     And user clicks profile menu
-    Then user sees following options
+    Then user sees following profile menu options
       | My Profile              |
       | Edit Profile Settings   |
       | Themes                  |
@@ -20,7 +21,7 @@ Feature: As a user, I should be able to logout.
       | help desk         |
       | marketing manager |
 
-
+  @US03AC2
   Scenario Outline: Verify users can log out using the "Log out" button
     Given the user logged in as "<userType>"
     And user clicks profile menu

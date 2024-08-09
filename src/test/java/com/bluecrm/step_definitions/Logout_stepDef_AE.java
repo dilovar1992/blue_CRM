@@ -18,8 +18,8 @@ public class Logout_stepDef_AE {
 
     }
 
-    @Then("user sees following options")
-    public void user_sees_following_options(List<String> expectedMenu) {
+    @Then("user sees following profile menu options")
+    public void user_sees_following_profile_menu_options(List<String> expectedMenu) {
 
         List<String> actualMenu = BrowserUtils.getElementsText(homePage.profileMenuItems);
         Assert.assertEquals(actualMenu,expectedMenu, "Profile menu items are not as expected");
