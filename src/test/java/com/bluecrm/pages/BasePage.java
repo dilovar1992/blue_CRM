@@ -19,9 +19,7 @@ public abstract class BasePage {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
-    //TODO : Locate lef menu items as list?
-//    @FindBy(css = "span.title-level-1")
-//    public List<WebElement> menuOptions;
+
 
     @FindBy(id = "pagetitle")
     public WebElement pageSubTitle;

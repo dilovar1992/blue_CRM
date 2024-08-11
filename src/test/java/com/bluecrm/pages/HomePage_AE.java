@@ -32,9 +32,6 @@ public class HomePage_AE extends BasePage {
     @FindBy(xpath = "(//div[contains(@id, 'blog_post_body')])[1]")
     public WebElement topFeedMessege;
 
-    @FindBy(css = "div.b24-app-block.b24-app-desktop>div.b24-app-block-header")
-    public WebElement mobileAppsHeader;
-
     @FindBy(xpath = "//div[.='My Tasks']")
     public WebElement myTasksWidgetHeader;
 
@@ -47,7 +44,17 @@ public class HomePage_AE extends BasePage {
     @FindBy(css = "div.sidebar-widget-item-wrap>a>span.task-item-text")
     public List<WebElement> myTasksWidgetOptions;
 
+    @FindBy(id = "feed-add-post-form-tab-vote")
+    public WebElement pollTab;
 
+    @FindBy(id = "question_0")
+    public WebElement questionInputBox;
+
+    @FindBy(id = "answer_0__0_")
+    public WebElement answer1InputBox;
+
+    @FindBy(id = "answer_0__1_")
+    public WebElement answer2InputBox;
 
 
     public WebElement getWidget(String widgetTitle){
@@ -63,5 +70,18 @@ public class HomePage_AE extends BasePage {
 
         //locate and return
         return Driver.getDriver().findElement(By.xpath(locator));
+    }
+
+    /**
+     * Gets iframe webelement and switchs to it and adds message content to the body of message box. and switches back to default content
+     * @param iframe
+     * @param messageContent
+     */
+
+    public void addMessageToFrame(WebElement iframe, String messageContent){
+        Driver.getDriver().switchTo().frame(messageIframe);
+        messageInputBox.clear();
+        messageInputBox.sendKeys(messageContent);
+        Driver.getDriver().switchTo().defaultContent();
     }
 }

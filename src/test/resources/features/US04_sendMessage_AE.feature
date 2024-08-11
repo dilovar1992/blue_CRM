@@ -24,7 +24,7 @@ Feature: As a user, I should be able to send messages.
     And clicks message input box
     And enters a "This place has only three exits, sir: Madness, and Death." message
     And clicks cancel button
-    Then user sees message input box collapse
+    Then user should see message area collapse
 
     Examples:
       | userType          |

@@ -11,6 +11,7 @@ public class SendMessage_stepDef_AE {
     HomePage_AE homePage = new HomePage_AE();
     String expectedMessage;
 
+
     @Given("clicks message input box")
     public void clicks_message_input_box() {
         homePage.collapsedMessageBox.click();
@@ -18,7 +19,6 @@ public class SendMessage_stepDef_AE {
 
     @Given("enters a {string} message")
     public void enters_a_message(String expectedMessage) {
-        this.expectedMessage = expectedMessage;
         Driver.getDriver().switchTo().frame(homePage.messageIframe);
         homePage.messageInputBox.clear();
         homePage.messageInputBox.sendKeys(expectedMessage);
@@ -42,10 +42,9 @@ public class SendMessage_stepDef_AE {
         homePage.messageCancelButton.click();
     }
 
-    @Then("user sees message input box collapse")
-    public void user_sees_message_input_box_collapse() {
+    @Then("user should see message area collapse")
+    public void user_should_see_message_area_collapse() {
         Assert.assertTrue(homePage.collapsedMessageBox.isDisplayed(),"Message input box is not in the collapsed form");
     }
-
 
 }
