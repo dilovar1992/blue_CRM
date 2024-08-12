@@ -4,15 +4,15 @@ Feature: As a user, I should be able to create a poll.
   Background: User is already in the log in page
     Given the user is on the login page
 
-  @US10AC1 @wip
+  @US10AC1
   Scenario Outline: Verify users can create a simple poll with a question and 2 answers.
     Given the user logged in as "<userType>"
     When the user clicks on POLL tab
     And the user enters the following poll information
-      | Title    | Poll for vegetableness |
-      | Question | What are you?          |
-      | Answer 1 | Cucumber               |
-      | Answer 2 | Salatalik              |
+      | Title    | Java Masters              |
+      | Question | Which one is your master? |
+      | Answer 1 | Saim                      |
+      | Answer 2 | Muhtar                    |
     And clicks submit button
     Then user sees the poll content on top of the feed
 
@@ -27,9 +27,10 @@ Feature: As a user, I should be able to create a poll.
     Given the user logged in as "<userType>"
     When the user clicks on POLL tab
     And the user enters the following poll information
-      | Question | What are you? |
-      | Answer 1 | Cucumber      |
-      | Answer 2 | Salatalik     |
+      | Title    | Poll for tv show                  |
+      | Question | Which one do you prefer to watch? |
+      | Answer 1 | Arrow                             |
+      | Answer 2 | The Flash                         |
     And clicks cancel button
     Then user should see message area collapse
 

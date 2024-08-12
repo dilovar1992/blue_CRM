@@ -56,6 +56,17 @@ public class HomePage_AE extends BasePage {
     @FindBy(id = "answer_0__1_")
     public WebElement answer2InputBox;
 
+    @FindBy(xpath = "(//li[contains(@id,'question')]/div)[1]")
+    public WebElement postedPollQuestion;
+
+    @FindBy(xpath = "(//input[contains(@id,'vote_radio')])[1]/../following-sibling::label")
+    public WebElement postedPollAnswer1;
+
+    @FindBy(xpath = "(//input[contains(@id,'vote_radio')])[2]/../following-sibling::label")
+    public WebElement postedPollAnswer2;
+
+
+
 
     public WebElement getWidget(String widgetTitle){
 
@@ -79,7 +90,7 @@ public class HomePage_AE extends BasePage {
      */
 
     public void addMessageToFrame(WebElement iframe, String messageContent){
-        Driver.getDriver().switchTo().frame(messageIframe);
+        Driver.getDriver().switchTo().frame(iframe);
         messageInputBox.clear();
         messageInputBox.sendKeys(messageContent);
         Driver.getDriver().switchTo().defaultContent();

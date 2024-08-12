@@ -12,7 +12,10 @@ import java.util.Map;
 
 public class PollFeature_stepDef_AE {
     HomePage_AE homePage = new HomePage_AE();
+
+    //map with poll information
     Map<String,String> pollInfo;
+
 
     @When("the user clicks on POLL tab")
     public void the_user_clicks_on_poll_tab() {
@@ -34,6 +37,10 @@ public class PollFeature_stepDef_AE {
         //confirm title content as expected
         BrowserUtils.waitFor(2);
         Assert.assertEquals(homePage.topFeedMessege.getText(),pollInfo.get("Title"), "The message on top of the feed is NOT AS EXPECTED");
+
+        Assert.assertEquals(homePage.postedPollQuestion.getText(), pollInfo.get("Question"),"Poll Question is not as expected");
+        Assert.assertEquals(homePage.postedPollAnswer1.getText(), pollInfo.get("Answer 1"),"Poll Answer 1 is not as expected");
+        Assert.assertEquals(homePage.postedPollAnswer2.getText(), pollInfo.get("Answer 2"), "Poll Answer 2 is not as expected");
 
         //to get sessionID
         //SessionId sessionId = ((RemoteWebDriver) Driver.getDriver()).getSessionId();
