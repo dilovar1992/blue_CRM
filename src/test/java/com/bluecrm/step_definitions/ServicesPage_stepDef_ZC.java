@@ -26,7 +26,7 @@ public class ServicesPage_stepDef_ZC {
         List<String> actualModules = BrowserUtils.getElementsText(servicesPageZc.servicesModules);
 
         Assert.assertEquals(actualModules, expectedModules);
-        Assert.assertEquals(actualModules.size(), expectedModuleNumbergitgit);
+        Assert.assertEquals(actualModules.size(), expectedModuleNumber);
 
 
 
