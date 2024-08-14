@@ -1,4 +1,4 @@
-@wip
+
 Feature: Users should be able to access to the Services page
 
   Background: User is already in the log in page
