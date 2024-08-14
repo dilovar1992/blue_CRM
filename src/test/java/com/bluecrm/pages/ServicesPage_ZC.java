@@ -13,5 +13,10 @@ public class ServicesPage_ZC extends BasePage{
     @FindBy(css = "span.main-buttons-item-text-title")
     public List<WebElement> servicesModules;
 
+    @FindBy (xpath = "//span[.='FAQ']")
+    public WebElement faqButton;
+
+    @FindBy (xpath = "//tbody//nobr//a")
+    public List<WebElement> faqDocuments;
 
 }

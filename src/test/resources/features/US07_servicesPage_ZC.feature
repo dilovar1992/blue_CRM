@@ -29,3 +29,19 @@ Feature: Users should be able to access to the Services page
       | hr                |
       | help desk         |
       | marketing manager |
+
+  @US07AC2
+  Scenario Outline: Verify users can access to the FAQ documents.
+    Given the user logged in as "<userType>"
+    When the user clicks on Services page
+    And the user clicks on FAQ button
+    Then the user can access to the following 3 documents
+      | Work Process          |
+      | Files and Documents   |
+      | Using portal services |
+
+    Examples:
+      | userType          |
+      | hr                |
+      | help desk         |
+      | marketing manager |
