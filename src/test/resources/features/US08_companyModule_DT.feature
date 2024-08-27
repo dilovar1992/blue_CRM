@@ -1,6 +1,7 @@
+@smoke @US08
 Feature: modules on "Company" page on the HR account
   User Story: As a user, I should be able to access to the Company page on the HR account
-
+  @US08AC1
   Scenario Outline: User should be able to see the 7 modules on the “Company” page.
     Given the user logged in as "<userType>"
     When user click on Company link under the Activity Stream menu
