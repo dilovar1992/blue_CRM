@@ -20,6 +20,7 @@ public class AppreciationMessage_stepDef_DT {
     @When("the user write the {string} on the text area")
     public void the_user_write_the_on_the_text_area(String message) {
        Driver.getDriver().switchTo().frame(main.iframe);
+       main.textArea.clear();
        main.textArea.sendKeys(message);
        Driver.getDriver().switchTo().parentFrame();
     }
