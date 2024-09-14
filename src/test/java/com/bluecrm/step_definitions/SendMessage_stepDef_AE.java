@@ -26,6 +26,7 @@ public class SendMessage_stepDef_AE {
 
     }
 
+    //TODO add to US11
     @Given("clicks submit button")
     public void clicks_submit_button() {
         homePage.messageSubmitButton.click();
@@ -37,6 +38,7 @@ public class SendMessage_stepDef_AE {
         Assert.assertEquals(homePage.topFeedMessege.getText(),expectedMessage, "The message on top of the feed is NOT AS EXPECTED");
     }
 
+    //TODO add to US11
     @Given("clicks cancel button")
     public void clicks_cancel_button() {
         homePage.messageCancelButton.click();
