@@ -11,6 +11,11 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 import java.net.URL;
 import java.time.Duration;
 
+/**
+ * The {@code Driver} class is a utility for managing WebDriver instances using the Singleton pattern.
+ * It provides methods to get a WebDriver instance and close it.
+ */
+
 public class Driver {
 
     //create a private constructor to remove access to this object
