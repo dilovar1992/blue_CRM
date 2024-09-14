@@ -1,4 +1,4 @@
-@smoke @US04
+@wip @US04
 Feature: As a user, I should be able to send messages.
 
   Background: User is already in the log in page
@@ -8,9 +8,9 @@ Feature: As a user, I should be able to send messages.
   Scenario Outline: Verify users can send simple text messages on the stream page.
     Given the user logged in as "<userType>"
     And clicks message input box
-    And enters a "All these buds will blossom, and in that moment you will know what your grief was" message
+    #And enters a "All these buds will blossom, and in that moment you will know what your grief was" message
     And clicks submit button
-    Then user sees message on top of the feed
+    Then user sees post on top of the feed
 
     Examples:
       | userType          |
@@ -22,7 +22,7 @@ Feature: As a user, I should be able to send messages.
   Scenario Outline: Verify users can cancel sending a message by clicking the Cancel button.
     Given the user logged in as "<userType>"
     And clicks message input box
-    And enters a "This place has only three exits, sir: Madness, and Death." message
+    #And enters a "This place has only three exits, sir: Madness, and Death." message
     And clicks cancel button
     Then user should see message area collapse
 

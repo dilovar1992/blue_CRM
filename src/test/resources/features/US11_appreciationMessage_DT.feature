@@ -1,4 +1,4 @@
-@US11
+@smoke @US11
 Feature: create and cancel appreciation message
   User Story:As a user, I should be able to create an appreciation
 @US11AC1

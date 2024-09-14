@@ -1,4 +1,4 @@
-
+@smoke @US12
 Feature: Users should be able to configure the menu
 
   Background: User is already in the log in page
